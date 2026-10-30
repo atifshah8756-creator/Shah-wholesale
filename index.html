@@ -430,22 +430,4 @@
             const method = document.getElementById('buyerPaymentMethod').value;
 
             const msg = `*NEW ORDER DETAILS*%0A` +
-                        `*Product:* ${selectedProduct.title}%0A` +
-                        `*Price:* Rs. ${selectedProduct.price}%0A` +
-                        `*Customer Name:* ${name}%0A` +
-                        `*Address:* ${address}%0A` +
-                        `*Payment Method:* ${method}`;
-
-            let cleanPhone = selectedProduct.phone.replace(/[^0-9]/g, '');
-            if (cleanPhone.startsWith('0')) {
-                cleanPhone = '92' + cleanPhone.substring(1);
-            }
-
-            window.open(`https://wa.me/${cleanPhone}?text=${msg}`, '_blank');
-        }
-
-        // Initial render
-        renderProducts(products);
-    </script>
-</body>
-</html>
+                        `
